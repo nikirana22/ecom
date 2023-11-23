@@ -24,8 +24,9 @@ class CartScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            ///toStringAsFixed because i'm showing only 2 no after decimal like 2.3453322 -> 2.34
             Text(
-              'Total Amount : \$${provider.allProductCost}',
+              'Total Amount : \$${provider.allProductCost.toStringAsFixed(2)}',
               style: const TextStyle(fontSize: 20),
             ),
             const SizedBox(height: 20),
