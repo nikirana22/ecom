@@ -16,7 +16,7 @@ class ProductContainer extends StatelessWidget {
       child: InkWell(
         onTap: () => _goToDetailsScreen(context),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3.w),
+          padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.h),
           child: Column(
             children: [
               Hero(tag: product.id, child: Image.network(product.image)),

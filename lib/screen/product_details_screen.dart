@@ -43,7 +43,7 @@ class ProductDetailScreen extends StatelessWidget {
             TextButton(
               onPressed: () => _addToCart(context),
               style: TextButton.styleFrom(
-                  minimumSize: const Size.fromHeight(50),
+                  minimumSize: Size.fromHeight(7.h),
                   backgroundColor: Colors.yellow,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10))),

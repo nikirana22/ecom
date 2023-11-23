@@ -46,8 +46,9 @@ class CartScreen extends StatelessWidget {
 
   Widget _buildCard(CartProvider provider, Product product) {
     return SizedBox(
-      height: 100,
+      height: 12.h,
       child: Card(
+        margin: EdgeInsets.symmetric(vertical: 1.h),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 3.w),
           child: Row(
