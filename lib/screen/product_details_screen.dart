@@ -13,6 +13,8 @@ class ProductDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -27,13 +29,16 @@ class ProductDetailScreen extends StatelessWidget {
                   child: Image.network(product.image, height: 42.h)),
             ),
             const SizedBox(height: 20),
-            Text(product.title, style: const TextStyle(fontSize: 18)),
+            Text(product.title, style: theme.textTheme.displayMedium),
             Text(
               '\$${product.price}',
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            Text(product.description),
+            Text(
+              product.description,
+              style: theme.textTheme.displaySmall,
+            ),
             SizedBox(height: 10.h),
             TextButton(
               onPressed: () => _addToCart(context),
@@ -42,7 +47,10 @@ class ProductDetailScreen extends StatelessWidget {
                   backgroundColor: Colors.yellow,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10))),
-              child: const Text('Add to Cart'),
+              child: Text(
+                'Add to Cart',
+                style: theme.textTheme.displaySmall,
+              ),
             ),
             const SizedBox(height: 20)
           ],

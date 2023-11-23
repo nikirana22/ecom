@@ -28,9 +28,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         onGenerateRoute: onGenerateRoute,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+            textTheme: TextTheme(
+                displayMedium: TextStyle(fontSize: 18.sp),
+                displaySmall: TextStyle(fontSize: 16.sp))),
         home: const HomeScreen(),
       ),
     );

@@ -11,9 +11,11 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final productProvider = context.watch<ProductProvider>();
+    final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Home Screen')),
+      appBar: AppBar(
+          title: Text('Home Screen', style: theme.textTheme.displayMedium)),
       body: FutureBuilder<List<Product>>(
           future: productProvider.fetchProduct(),
           builder: (_, snapShot) {

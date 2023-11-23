@@ -11,9 +11,14 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = context.watch<CartProvider>();
     final products = provider.products;
+    final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Cart Screen')),
+      appBar: AppBar(
+          title: Text(
+        'Cart Screen',
+        style: theme.textTheme.displayMedium,
+      )),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         child: Column(
